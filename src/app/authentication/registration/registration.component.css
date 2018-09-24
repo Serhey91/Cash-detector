@@ -1,0 +1,28 @@
+.underlined {
+    border: none;
+    box-shadow: none;
+    transition: all 0.20s ease;
+}
+
+.underlined:focus {
+    border-bottom: 2px solid #3f7ad3;
+}
+
+.form-group.has-error span {
+    color: rgb(226, 34, 34);
+    font-size: 15px;
+    display: block;
+    padding: 4px;
+    background-color: rgb(233, 178, 178);
+    border-radius: 2px;
+}
+
+.has-error .form-control.underlined {
+    box-shadow: none;
+    border-color: rgb(226, 34, 34);
+}
+
+.has-success .form-control.underlined {
+    box-shadow: none;
+    border-color: rgb(2, 161, 50);
+}

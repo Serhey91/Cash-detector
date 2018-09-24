@@ -1,0 +1,11 @@
+--skip-install - do not install node_modules
+--prefix spa - choosing another prefix files and components
+--style scss - styling with scss preprocessors
+
+npm i json-server -g
+
+
+npm install concurrently --save
+
+in package.json -  "start" : "concurrently  \"npm run start\"  \"npm run server\""
+

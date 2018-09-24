@@ -1,0 +1,27 @@
+<p class="text-center">Please sign in to work</p>
+<form [formGroup]='formLogin' novalidate (ngSubmit)='onSubmit()'>
+    <div class="form-group" [ngClass]="{'has-error':formLogin.get('email').invalid && formLogin.get('email').touched, 'has-success':formLogin.get('email').valid && formLogin.get('email').touched }">
+        <label for="email">Email</label>
+        <input type="text" class="form-control underlined" id="email" autocomplete="off" placeholder="Enter your email" formControlName='email'>
+
+        <span *ngIf="formLogin.get('email').hasError('required') && formLogin.get('email').touched">Please enter your email</span>
+        <span *ngIf="formLogin.get('email').hasError('email')  && formLogin.get('email').touched">Enter correct value email</span>
+
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':formLogin.get('password').invalid && formLogin.get('password').touched,
+     'has-success':formLogin.get('password').valid && formLogin.get('password').touched }">
+        <label for="password">Password</label>
+        <input type="password" class="form-control underlined" id="password" autocomplete="off" placeholder="Password" formControlName='password'>
+        <span *ngIf="formLogin.get('password').hasError('required') && formLogin.get('password').touched">Please enter your password</span>
+        <span *ngIf="formLogin.get('password').hasError('minlength')  && formLogin.get('password').touched">Password must be 6 simbols min.</span>
+    </div>
+    <div *ngIf="errorMessage.text" class="alert alert-{{errorMessage.type}}">{{errorMessage.text}}</div>
+    <div class="form-group">
+        <button type="submit" [disabled]='!formLogin.valid' class="btn btn-sm btn-block btn-primary">Sign in</button>
+    </div>
+    <div class="form-group">
+        <h6 class="text-muted text-center">
+            No account? <a [routerLink]='"/registration"'>Go on and register!</a>
+        </h6>
+    </div>
+</form>

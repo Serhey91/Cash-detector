@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(141, 148, 150);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.authentication {
+    min-width: 290px;
+    background-color: #eef3f5;
+    opacity: 0.9;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+
+.authentication-title {
+    display: flex;
+    color: #7a8896;
+    padding: 15px 10px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    align-items: center;
+    border-bottom: 2px solid #3f9db3;
+}
+
+.authentication-logo {
+    flex-grow: 0;
+    margin-right: 12px;
+}
+
+.authentication-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.authentication-content {
+    padding: 0 20px;
+}

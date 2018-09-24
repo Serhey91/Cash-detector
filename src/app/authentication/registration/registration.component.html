@@ -1,0 +1,39 @@
+<p class="text-center">Registration new account</p>
+<form [formGroup]='formRegister' (ngSubmit)='onSubmit()'>
+    <div class="form-group" [ngClass]="{'has-error':formRegister.get('email').invalid && formRegister.get('email').touched, 'has-success':formRegister.get('email').valid && formRegister.get('email').touched }">
+        <label for="email">Email</label>
+        <input type="text" class="form-control underlined" id="email" placeholder="Enter email" autocomplete="off" formControlName='email'>
+        <span *ngIf="formRegister.get('email').hasError('required') && formRegister.get('email').touched">Please enter your email</span>
+        <span *ngIf="formRegister.get('email').hasError('email')  && formRegister.get('email').touched">Enter correct value email</span>
+        <span *ngIf="formRegister.get('email').hasError('forbiddenEmail')  && formRegister.get('email').touched">User with such email has exist already</span>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':formRegister.get('password').invalid && formRegister.get('password').touched, 'has-success':formRegister.get('password').valid && formRegister.get('password').touched }">
+        <label for="password">Password</label>
+        <input type="password" class="form-control underlined" id="password" placeholder="Enter your password" autocomplete="off" formControlName='password'>
+        <span *ngIf="formRegister.get('password').hasError('required') && formRegister.get('password').touched">Please enter your password</span>
+        <span *ngIf="formRegister.get('password').hasError('minlength')  && formRegister.get('password').touched">Password must be 6 simbols min.</span>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':formRegister.get('name').invalid && formRegister.get('name').touched, 'has-success':formRegister.get('name').valid && formRegister.get('name').touched }">
+        <label for="name">Name</label>
+        <input type="text" class="form-control underlined" id="name" placeholder="Enter your name" autocomplete="off" formControlName='name'>
+        <span *ngIf="formRegister.get('name').hasError('required') && formRegister.get('name').touched">Please enter your name</span>
+
+
+    </div>
+    <div>
+        <label for="agree">
+            <input formControlName='agree' class="checkbox" id="agree" type="checkbox" >
+            <span>Agree with rules</span>
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-primary" [disabled]='formRegister.invalid'>Register</button>
+    </div>
+    <div class="form-group">
+        <h6 class="text-muted text-center">
+            Already have an account? <a [routerLink]='"/login"'>
+                Enter!
+            </a>
+        </h6>
+    </div>
+</form>
