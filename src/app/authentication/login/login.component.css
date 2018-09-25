@@ -26,3 +26,7 @@
     box-shadow: none;
     border-color: rgb(2, 161, 50);
 }
+
+input {
+    text-indent: 8px;
+}

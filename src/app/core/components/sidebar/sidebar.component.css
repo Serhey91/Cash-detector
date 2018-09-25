@@ -1,0 +1,25 @@
+ul.metismenu {
+    display: block;
+}
+
+.sidebar-title {
+    display: flex;
+    color: #c1c9d1;
+    padding: 15px 10px;
+    line-height: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    align-items: center;
+    border-bottom: 2px solid #3f9db3;
+}
+
+.sidebar-logo {
+    flex-grow: 0;
+    margin-right: 12px;
+}
+
+.sidebar-text {
+    flex-grow: 1;
+    text-align: center;
+}

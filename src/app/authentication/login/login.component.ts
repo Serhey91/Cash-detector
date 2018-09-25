@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '../../../../node_modules/@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../../common/services/user.service';
 import { User } from '../../common/models/user.model';
 import { Message } from '../../common/models/message.model';
 import { AuthenticationService } from '../../common/services/authentication.service';
-import { Router, ActivatedRoute, Params} from '../../../../node_modules/@angular/router';
+import { Router, ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -44,7 +44,7 @@ if (params['nowCanLogin']) {
           this.errorMessage.text = '';
           localStorage.setItem('response', JSON.stringify(response));
           this.authService.logIn();
-          // this.router.navigate('some-page');
+          this.router.navigate(['/core', 'bill']);
         } else {
           this.showMessage({text: 'Wrong password', type: 'danger'});
         }
