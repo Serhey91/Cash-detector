@@ -7,6 +7,7 @@ import { PlanningPageComponent } from './components/planning-page/planning-page.
 import { RecordsPageComponent } from './components/records-page/records-page.component';
 const routes: Routes = [
     {path: 'core', component: CoreComponent, children: [
+        {path: '', redirectTo: 'records', pathMatch: 'full'},
         {path: 'bill', component: BillPageComponent},
         {path: 'history', component: HistoryPageComponent},
         {path: 'planning', component: PlanningPageComponent},

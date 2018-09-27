@@ -1,34 +1,12 @@
 {
-  "users": [
-    {
-      "email": "Patokha91@gmail.com",
-      "password": "qwerty",
-      "name": "Serhey",
-      "id": 1
-    },
-    {
-      "email": "Patokha911@gmail.com",
-      "password": "123451",
-      "name": "SSS",
-      "id": 2
-    },
-    {
-      "email": "S@mail.ci",
-      "password": "2222222",
-      "name": "S",
-      "id": 3
-    },
-    {
-      "email": "s@m.ru",
-      "password": "123456",
-      "name": "S",
-      "id": 4
-    },
-    {
-      "email": "patokha91@gmail.com",
-      "password": "123456",
-      "name": "Serhey",
-      "id": 5
+    "users": [{
+        "email": "patokha91@gmail.com",
+        "password": "123456",
+        "name": "S",
+        "id": 1
+    }],
+    "bill": {
+        "value": 14500,
+        "currency": "UAH"
     }
-  ]
 }

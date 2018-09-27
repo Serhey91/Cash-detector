@@ -10,6 +10,10 @@
         </h5>
         <nav class="menu">
             <ul class="nav metismenu">
+
+                <li routerLinkActive='active'>
+                    <a [routerLink]='"/core/records"'> My records </a>
+                </li>
                 <li routerLinkActive='active'>
                     <a [routerLink]='"/core/bill"'> My bills </a>
                 </li>
@@ -19,9 +23,7 @@
                 <li routerLinkActive='active'>
                     <a [routerLink]='"/core/planning"'> My planning </a>
                 </li>
-                <li routerLinkActive='active'>
-                    <a [routerLink]='"/core/records"'> My records </a>
-                </li>
+
             </ul>
         </nav>
     </div>

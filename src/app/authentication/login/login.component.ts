@@ -44,7 +44,7 @@ if (params['nowCanLogin']) {
           this.errorMessage.text = '';
           localStorage.setItem('response', JSON.stringify(response));
           this.authService.logIn();
-          this.router.navigate(['/core', 'bill']);
+          this.router.navigate(['/core']);
         } else {
           this.showMessage({text: 'Wrong password', type: 'danger'});
         }
