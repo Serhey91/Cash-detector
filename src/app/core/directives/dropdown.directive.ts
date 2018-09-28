@@ -8,4 +8,5 @@ export class DropdownDirective {
       onClick() {
           this.isOpen = !this.isOpen;
       }
+      
 }

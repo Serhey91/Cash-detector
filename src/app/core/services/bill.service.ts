@@ -33,4 +33,7 @@ return this.http.get(this.urlCurrency).pipe(map((response: Response) => {
     return response.json();
 }));
 }
+updateBill(bill: Bill): Observable<Bill> {
+return this.put('bill', bill);
+}
 }

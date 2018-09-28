@@ -1,12 +1,94 @@
 {
-    "users": [{
-        "email": "patokha91@gmail.com",
-        "password": "123456",
-        "name": "S",
-        "id": 1
-    }],
-    "bill": {
-        "value": 14500,
-        "currency": "UAH"
+  "users": [
+    {
+      "email": "patokha91@gmail.com",
+      "password": "123456",
+      "name": "S",
+      "id": 1
     }
+  ],
+  "bill": {
+    "value": 14740,
+    "currency": "UAH"
+  },
+  "categories": [
+    {
+      "categoryName": "Дом",
+      "capacity": 6000,
+      "id": 1
+    },
+    {
+      "categoryName": "Ребенок",
+      "capacity": 2000,
+      "id": 2
+    },
+    {
+      "categoryName": "Еда",
+      "capacity": 6000,
+      "id": 3
+    },
+    {
+      "categoryName": "Work",
+      "capacity": 15000,
+      "id": 4
+    }
+  ],
+  "events": [
+    {
+      "type": "outcome",
+      "amount": 800,
+      "category": "Ребенок",
+      "date": "9/28/2018, 3:45:33 PM",
+      "description": "Ботинки",
+      "id": 1
+    },
+    {
+      "type": "income",
+      "amount": 7000,
+      "category": "Work",
+      "date": "9/28/2018, 5:49:16 PM",
+      "description": "ITVDN",
+      "id": 2
+    },
+    {
+      "type": "income",
+      "amount": 2000,
+      "category": "Work",
+      "date": "9/28/2018, 5:49:46 PM",
+      "description": "w",
+      "id": 3
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": "Work",
+      "date": "9/28/2018, 5:50:10 PM",
+      "description": "cakes",
+      "id": 4
+    },
+    {
+      "type": "outcome",
+      "amount": 5000,
+      "category": "Дом",
+      "date": "9/28/2018, 6:05:09 PM",
+      "description": "туув",
+      "id": 5
+    },
+    {
+      "type": "outcome",
+      "amount": 1960,
+      "category": "Еда",
+      "date": "9/28/2018, 6:05:44 PM",
+      "description": "2",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 2000,
+      "category": "Еда",
+      "date": "9/28/2018, 6:06:22 PM",
+      "description": "sfd",
+      "id": 7
+    }
+  ]
 }
