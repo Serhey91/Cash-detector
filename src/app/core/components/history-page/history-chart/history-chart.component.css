@@ -1,0 +1,9 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ngx-charts-pie-chart {
+    padding: 0px 20px;
+}

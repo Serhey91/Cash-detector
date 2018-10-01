@@ -8,87 +8,103 @@
     }
   ],
   "bill": {
-    "value": 14740,
+    "value": 3296,
     "currency": "UAH"
   },
   "categories": [
     {
-      "categoryName": "Дом",
-      "capacity": 6000,
+      "categoryName": "Квартира",
+      "capacity": 4200,
       "id": 1
     },
     {
       "categoryName": "Ребенок",
-      "capacity": 2000,
+      "capacity": 2500,
       "id": 2
     },
     {
-      "categoryName": "Еда",
-      "capacity": 6000,
+      "categoryName": "Еда/Одежда",
+      "capacity": 5000,
       "id": 3
     },
     {
-      "categoryName": "Work",
-      "capacity": 15000,
+      "categoryName": "Работа",
+      "capacity": 2000,
       "id": 4
     }
   ],
   "events": [
     {
       "type": "outcome",
-      "amount": 800,
-      "category": "Ребенок",
-      "date": "9/28/2018, 3:45:33 PM",
-      "description": "Ботинки",
+      "amount": 4200,
+      "category": "Квартира",
+      "date": "10/1/2018, 1:19:31 PM",
+      "description": "Аренда",
       "id": 1
     },
     {
       "type": "income",
-      "amount": 7000,
-      "category": "Work",
-      "date": "9/28/2018, 5:49:16 PM",
-      "description": "ITVDN",
+      "amount": 500,
+      "category": "Работа",
+      "date": "10/1/2018, 1:19:47 PM",
+      "description": " ДР поздравления",
       "id": 2
     },
     {
       "type": "income",
-      "amount": 2000,
-      "category": "Work",
-      "date": "9/28/2018, 5:49:46 PM",
-      "description": "w",
+      "amount": 2600,
+      "category": "Работа",
+      "date": "10/1/2018, 1:19:59 PM",
+      "description": " Тренинги",
       "id": 3
     },
     {
       "type": "outcome",
-      "amount": 300,
-      "category": "Work",
-      "date": "9/28/2018, 5:50:10 PM",
-      "description": "cakes",
+      "amount": 200,
+      "category": "Работа",
+      "date": "10/1/2018, 1:20:07 PM",
+      "description": "Торт ДР",
       "id": 4
     },
     {
       "type": "outcome",
-      "amount": 5000,
-      "category": "Дом",
-      "date": "9/28/2018, 6:05:09 PM",
-      "description": "туув",
+      "amount": 1350,
+      "category": "Ребенок",
+      "date": "10/1/2018, 1:20:20 PM",
+      "description": "Зимняя одежда",
       "id": 5
     },
     {
       "type": "outcome",
-      "amount": 1960,
-      "category": "Еда",
-      "date": "9/28/2018, 6:05:44 PM",
-      "description": "2",
+      "amount": 800,
+      "category": "Ребенок",
+      "date": "10/1/2018, 1:20:28 PM",
+      "description": "Памперсы",
       "id": 6
     },
     {
-      "type": "outcome",
-      "amount": 2000,
-      "category": "Еда",
-      "date": "9/28/2018, 6:06:22 PM",
-      "description": "sfd",
+      "type": "income",
+      "amount": 800,
+      "category": "Ребенок",
+      "date": "10/1/2018, 1:20:38 PM",
+      "description": " от государства",
       "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": "Работа",
+      "date": "10/1/2018, 1:22:26 PM",
+      "description": "Новое событие",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 199,
+      "category": "Еда/Одежда",
+      "date": "10/1/2018, 1:32:23 PM",
+      "description": "На курицу",
+      "id": 9
     }
   ]
 }

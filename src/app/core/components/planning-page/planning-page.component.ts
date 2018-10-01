@@ -29,9 +29,7 @@ this.bill = data[0];
 this.categories = data[1];
 this.events = data[2];
 this.isLoaded = true;
-console.log(this.bill);
-console.log(this.categories);
-console.log(this.events);
+
 });
   }
   getCategoryCost(cat: Category): number {

@@ -14,4 +14,7 @@ return this.post('events', event);
     getEvents():Observable<EventModel[]> {
         return this.get('events');
     }
+    getEventById(id: string): Observable<EventModel> {
+        return this.get(`events/${id}`);
+    }
 }

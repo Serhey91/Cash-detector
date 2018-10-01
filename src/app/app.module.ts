@@ -8,13 +8,14 @@ import { UserService } from './common/services/user.service';
 import { HttpModule } from '@angular/http';
 import { AuthenticationService } from './common/services/authentication.service';
 import { CoreModule } from './core/core.module';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, AuthenticationModule, HttpModule, CoreModule
+    BrowserModule, AppRoutingModule, AuthenticationModule, HttpModule, CoreModule,
+    BrowserAnimationsModule
 
   ],
   providers: [UserService, AuthenticationService],

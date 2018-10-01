@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" *ngIf="currentCategory">
     <div class="card-header bordered">
         <div class="header-block">
             <h3 class="title">Edit category</h3>
@@ -22,7 +22,7 @@
             <div class="form-group" [ngClass]="{'has-error':categoryName.invalid && categoryName.touched}">
 
                 <label class="control-label" for="category-name">Enter name to change</label>
-                <input type="text" autocomplete="off" id="category-name" [ngModel]='currentCategory.categoryName' #categoryName='ngModel' required name='categoryName' class="form-control">
+                <input type="text" autocomplete="off" id="category-name" [ngModel]=' currentCategory.categoryName' #categoryName='ngModel' required name='categoryName' class="form-control">
                 <span *ngIf="categoryName.invalid && categoryName.touched" class="form-help-text">Please enter a category</span>
             </div>
 

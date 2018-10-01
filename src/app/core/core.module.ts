@@ -22,12 +22,15 @@ import { HistoryChartComponent } from './components/history-page/history-chart/h
 import { HistoryDetailsComponent } from './components/history-page/history-details/history-details.component';
 import { HistoryEventsComponent } from './components/history-page/history-events/history-events.component';
 import { HistoryFilterComponent } from './components/history-page/history-filter/history-filter.component';
+import { SearchPipe } from './pipes/search.pipe';
 @NgModule({
     imports: [CommonModule, SharedModule, CoreRoutingModule],
     declarations: [BillPageComponent, HistoryPageComponent,
          PlanningPageComponent, RecordsPageComponent, CoreComponent,
           SidebarComponent, HeaderComponent,
-           DropdownDirective, BillCardComponent, CurrencyCardComponent, AddEventComponent, AddCategoryComponent, EditCategoryComponent, HistoryChartComponent, HistoryDetailsComponent, HistoryEventsComponent, HistoryFilterComponent],
+           DropdownDirective, BillCardComponent, CurrencyCardComponent,
+            AddEventComponent, AddCategoryComponent, EditCategoryComponent,
+             HistoryChartComponent, HistoryDetailsComponent, HistoryEventsComponent, HistoryFilterComponent, SearchPipe],
           providers: [BillService, CategoriesService, EventsService]
 })
 export class CoreModule {

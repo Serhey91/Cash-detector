@@ -1,3 +1,33 @@
-<p>
-  history-details works!
-</p>
+<div *ngIf="isLoaded">
+    <div class="title-block">
+        <h3 class="title">
+            <a [routerLink]='["/core/history"]'><i class="fa fa-angle-double-left"></i></a> Event page № {{eventDetail.id}}
+            <span class="sparkline bar"></span>
+        </h3>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="card" [ngClass]="eventDetail.type ==='income' ? 'card-success': 'card-danger'">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title text-light">{{eventDetail.type | uppercase}}</p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <ul>
+                            <li>Amount: <strong>{{eventDetail.amount | number: '1.2'}} UAH</strong></li>
+                            <li>Category: <strong>{{eventDetail.category}}</strong></li>
+                            <li>Description: <strong>{{eventDetail.description}}</strong></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer h-25 bg-primary">
+                        <span>Date: {{eventDetail.date | date: 'dd/MM/yy'}}</span>
+                        <span class='pull-right'>Time: {{eventDetail.date | date: 'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="text-center text-capitalize text-danger" *ngIf="!isLoaded">Loading ...</div>

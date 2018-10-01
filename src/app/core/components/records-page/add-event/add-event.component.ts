@@ -27,7 +27,7 @@ export class AddEventComponent implements OnInit {
   }
   onSubmit(form: NgForm) {
     // Деструктуризация элементов полей формы
-    const {amount, description, category, type } = form.value;
+    let {amount, description, category, type } = form.value;
     // Проверка ввода на отрицательное число
     if (amount < 0) {amount *= -1; }
     // Создние нового события( НЕ EVENT - а денежное событие) - с передачей парметров

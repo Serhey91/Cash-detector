@@ -4,25 +4,29 @@
             <div class="card">
                 <div class="card-header bordered">
                     <div class="header-block">
-                        <h3 class="title">Список событий</h3>
+                        <h3 class="title">Events list</h3>
                     </div>
-                    <div class="form-inline pull-right m-r-2">
+
+
+                    <div class="form-inline pull-right mr-3">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Поиск...">
+                            <input type="text" [(ngModel)]='searchValue' class="form-control" [placeholder]="searchPlaceholder">
                         </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary dropdown-toggle ">
-                                Параметр
-                            </button>
+                        <div class="btn-group input-group-append" coreDropdown>
+                            <button type="button" class="btn btn-success-outline dropdown-toggle ">Choose option</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" (click)='changeCriteria("amount")'>Amount</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
+                                <a class="dropdown-item" (click)='changeCriteria("date")'>Date</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" (click)='changeCriteria("category")'>Category</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" (click)='changeCriteria("type")'>Type</a>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
                 <div class="card-block">
                     <table class="table table-striped">
@@ -37,28 +41,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>44 444</td>
-                                <td>12.12.2017</td>
-                                <td>Товары</td>
+                            <tr *ngFor="let event of allEvents | filter:searchValue:searchField ; let i = index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{event.amount | number:'1.2'}}</td>
+                                <td>{{event.date | date: 'dd/MM/yy'}}</td>
+                                <td>{{event.category}}</td>
                                 <td>
-                                    <span class="label label-danger">Расход</span>
+                                    <span class="label " [ngClass]="event.type === 'outcome'? 'label-danger':'label-success'">{{event.type}}</span>
                                 </td>
-                                <td class="text-lg-center">
-                                    <a href="#" class="btn btn-primary-outline">Открыть</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>33 333</td>
-                                <td>12.12.2017</td>
-                                <td>Отдых</td>
-                                <td>
-                                    <span class="label label-success">Доход</span>
-                                </td>
-                                <td class="text-lg-center">
-                                    <a href="#" class="btn btn-primary-outline">Открыть</a>
+                                <td class="text-center">
+                                    <a [routerLink]='["/core/history", event.id]' class="btn btn-primary-outline">Open event</a>
                                 </td>
                             </tr>
                         </tbody>

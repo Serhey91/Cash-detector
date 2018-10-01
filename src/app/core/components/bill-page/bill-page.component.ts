@@ -20,7 +20,7 @@ export class BillPageComponent implements OnInit {
   }
   onRefresh() {
     this.isLoaded = false;
-   this.getInfoFromServer(); 
+   this.getInfoFromServer();
   }
   // combineLatest - метод позволяет принимать несколько стримов одновременно
   getInfoFromServer() {
