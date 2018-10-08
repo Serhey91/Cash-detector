@@ -9,7 +9,9 @@
     </div>
 </div>
 <section class="section">
-    <div class="text-center text-capitalize text-danger" *ngIf="!isLoaded">Loading ...</div>
+    <div class="text-center text-capitalize text-danger" *ngIf="!isLoaded">
+        <app-loader></app-loader>
+    </div>
     <div class="row" *ngIf="isLoaded">
         <core-bill-card [bill]='bill' [currency]='currency' class="col-12 col-md-4   stats-col"></core-bill-card>
         <core-currency-card [currency]='currency' class="col-12 col-md-8   history-col"></core-currency-card>

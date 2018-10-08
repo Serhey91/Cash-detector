@@ -6,13 +6,21 @@
         <button class="btn-sm btn btn-primary-outline" (click)='onRefresh()'>
                 <i class="fa fa-refresh"></i>
               </button>
+        <button class="ml-3 btn-sm btn btn-primary-outline" (click)='openFilter()'>
+                <i class="fa fa-filter"></i>
+              </button>
+
     </div>
 </div>
 <div *ngIf="isLoaded">
     <core-history-chart *ngIf="isData" [data]='allDataForChart'></core-history-chart>
     <div class="text-danger m-2 text-center" *ngIf="!isData">No chart to show</div>
 
-    <core-history-events [allCategories]='allCategories' [allEvents]='allEvents'></core-history-events>
-    <core-history-filter></core-history-filter>
+    <core-history-events [allCategories]='allCategories' [allEvents]='filteredEvents'></core-history-events>
+    <div *ngIf="isFilterVisible">
+        <core-history-filter [categories]='allCategories' (FilterCancel)='FilterCancel()' (FilterApply)='FilterApply($event)'></core-history-filter>
+    </div>
 </div>
-<div class="text-center text-capitalize text-danger" *ngIf="!isLoaded">Loading ...</div>
+<div class="text-center text-capitalize text-danger" *ngIf="!isLoaded">
+    <app-loader></app-loader>
+</div>

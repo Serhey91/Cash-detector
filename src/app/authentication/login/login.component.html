@@ -15,7 +15,7 @@
         <span *ngIf="formLogin.get('password').hasError('required') && formLogin.get('password').touched">Please enter your password</span>
         <span *ngIf="formLogin.get('password').hasError('minlength')  && formLogin.get('password').touched">Password must be 6 simbols min.</span>
     </div>
-    <div *ngIf="errorMessage.text" class="alert alert-{{errorMessage.type}}">{{errorMessage.text}}</div>
+    <div *ngIf="errorMessage.text" @fade class="alert alert-{{errorMessage.type}}">{{errorMessage.text}}</div>
     <div class="form-group">
         <button type="submit" [disabled]='!formLogin.valid' class="btn btn-sm btn-block btn-primary">Sign in</button>
     </div>

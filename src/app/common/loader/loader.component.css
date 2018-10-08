@@ -1,0 +1,21 @@
+.loader-animator {
+    display: block;
+    animation: spinner 0.5s linear infinite;
+    z-index: 2;
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: red yellow green blue;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

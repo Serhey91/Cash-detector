@@ -13,7 +13,6 @@ export class CurrencyCardComponent implements OnInit {
 
   ngOnInit() {
    this.currencies = this.currency.filter(item => item.ccy !== 'BTC');
-    console.log(this.currencies);
   }
 
 }

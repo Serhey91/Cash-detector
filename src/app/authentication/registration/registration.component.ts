@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../../common/services/user.service';
 import { User } from '../../common/models/user.model';
 import { Router } from '@angular/router';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,9 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   formRegister: FormGroup;
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private title: Title) { 
+    title.setTitle('Registration');
+  }
 
   ngOnInit() {
     this.formRegister = new FormGroup({

@@ -5,23 +5,31 @@ import { User } from '../../common/models/user.model';
 import { Message } from '../../common/models/message.model';
 import { AuthenticationService } from '../../common/services/authentication.service';
 import { Router, ActivatedRoute, Params} from '@angular/router';
+import { fadeToggle } from '../../common/animations/opacity.animation';
+import { Title } from '../../../../node_modules/@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [fadeToggle]
 })
 export class LoginComponent implements OnInit {
 private formLogin: FormGroup;
 errorMessage: Message;
 constructor(private userService: UserService, private authService: AuthenticationService,
-  private router: Router, private route: ActivatedRoute) { }
+  private router: Router, private route: ActivatedRoute,
+private title: Title) {
+  title.setTitle('Enter system');
+ }
   ngOnInit() {
     this.errorMessage = new Message('danger', null);
     this.route.queryParams.subscribe((params: Params) => {
-      console.log(params);
 if (params['nowCanLogin']) {
   this.showMessage({text: 'Now you can go to the system', type: 'success'});
+} else if (params['accessDenied']) {
+  this.showMessage({text: 'Please login for enter a system', type: 'danger'});
+
 }
     });
     this.formLogin = new FormGroup({

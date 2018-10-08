@@ -12,8 +12,10 @@
                     <i class="fa fa-angle-double-down"></i>
                 </a>
                 <div class="dropdown-menu profile-dropdown-menu">
-
+                    <a class="dropdown-item" [routerLink]='"/core/bill"'> <i class="fa fa-dollar icon"></i>Show bill status</a>
                     <a class="dropdown-item" [routerLink]='"/core/records"'> <i class="fa fa-gear icon"></i>Make new record</a>
+                    <a class="dropdown-item" [routerLink]='"/core/history"'> <i class="fa fa-history icon"></i>Show history</a>
+                    <a class="dropdown-item" [routerLink]='"/core/planning"'> <i class="fa fa-balance-scale icon"></i> Show limit plan</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" (click)='onLogOut()'><i class="fa fa-power-off icon"></i>Sign out</a>
                 </div>

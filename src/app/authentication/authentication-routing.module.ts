@@ -6,6 +6,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 
 const appRoutes: Routes = [
     {path: '', component: AuthenticationComponent, children: [
+        {path: '', redirectTo: 'login', pathMatch: 'full'},
         {path: 'login', component: LoginComponent},
         {path: 'registration', component: RegistrationComponent}
     ]}

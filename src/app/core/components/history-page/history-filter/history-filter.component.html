@@ -1,46 +1,32 @@
-<div class="modal fade">
+<div class="modal fade in">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close">
-            <span>×</span>
-          </button>
-                <h4 class="modal-title">Фильтр</h4>
+
+                <h3 class="modal-title">Filter for chart</h3>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label class="control-label" for="period">Выберите период</label>
-                    <select class="form-control" id="period">
-              <option>тип</option>
-            </select>
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Выберите тип события</label>
+                    <label class="control-label">Choose type of event</label>
                     <div>
-                        <label>
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                >
-                <span>еуче</span>
+                        <label *ngFor="let type of typesCost">
+                <input class="checkbox" type="checkbox" [value]='type.type' (change)='handleType($event.target)'>
+                <span>{{type.label}}</span>
               </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Выберите категории</label>
+                    <label class="control-label">Choose category</label>
                     <div>
-                        <label>
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                >
-                <span>еуче</span>
+                        <label *ngFor="let cat of categories">
+                <input [value]='cat.categoryName' class="checkbox" type="checkbox" (change)='handleCategory($event.target)' >
+                <span>{{cat.categoryName}}</span>
               </label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">Отмена</button>
-                    <button type="button" class="btn btn-primary">Применить</button>
+                    <button type="button" class="btn btn-secondary" (click)='closeFilter()'>Cancel</button>
+                    <button type="button" class="btn btn-primary" (click)='applyFilter()'>Apply</button>
                 </div>
             </div>
         </div>
